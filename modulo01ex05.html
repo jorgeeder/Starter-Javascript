@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Curso Javascript - Rocketseat</title>
+  </head>
+
+  <body>
+    <h1>MODULO 01 EXERCICIO 05</h1>
+
+    <script>
+      function exibeHabilidades(usuarios) {
+        for (usuario of usuarios) {
+        console.log(
+        "O " +
+        usuario.nome +
+        " possui as habilidades: " +
+        usuario.habilidades.join(", "));     
+        }
+      }
+      var usuarios = [
+        {
+          nome: "Diego",
+          habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+          nome: "Gabriel",
+          habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+      ];
+      
+      exibeHabilidades(usuarios);
+     
+    </script>
+    <h2>vizualizar resultado no console</h2>
+  </body>
+</html>
