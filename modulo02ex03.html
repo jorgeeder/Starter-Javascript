@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>MÓDULO 02 - 3º EXERCÍCIO</title>
+  </head>
+
+  <body>
+    <ul id="lista"></ul>
+    
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+
+      var list= document.querySelector('#lista');
+
+      nomes.forEach(function(name) {
+      var listElement = document.createElement('li');
+      listElement.innerText = name;
+      list.appendChild(listElement);
+      })
+
+    </script>
+  </body>
+
+</html>

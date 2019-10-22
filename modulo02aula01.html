@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Curso Javascript - Rocketseat</title>
+    </head>
+    <body>
+        <h1>Eventos Inline</h1>
+
+        <div id="app">
+            <button onclick="mostraAlerta()">Me pressione</button>
+            <button onmouseover="mostraAlertaOMO()">Passe por cima</button>
+            <input placeholder="Digite algo" onkeypress="mostraAlertaOKP()"/>
+        </div>
+
+        <script>
+            function mostraAlerta(){
+                alert('Botão clicado');
+            }  
+            function mostraAlertaOMO(){
+                alert('Você passou o mouse por mim?');
+            }
+            function mostraAlertaOKP(){
+                alert('Você Digitou algo?');
+            }
+        </script>
+    </body>
+</html>
