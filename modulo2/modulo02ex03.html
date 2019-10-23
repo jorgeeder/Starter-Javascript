@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Curso Javascript - Rocketseat</title>
+</head>
+
+<body>
+  <h1>MÓDULO 02 - 3º EXERCÍCIO</h1>
+
+  <ul id="lista"></ul>
+
+  <script>
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+
+    var list = document.querySelector('#lista');
+
+    nomes.forEach(function (name) {
+      var listElement = document.createElement('li');
+      listElement.innerText = name;
+      list.appendChild(listElement);
+    })
+
+  </script>
+</body>
+
+</html>

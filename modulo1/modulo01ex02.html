@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Curso Javascript - Rocketseat</title>
+</head>
+
+<body>
+  <div>
+    <h1>MÓDULO 01 - 2º EXERCÍCIO</h1>
+    <h2>Visualizar resultado no console</h2>
+  </div>
+  <script>
+    function pares(x, y) {
+      while (x < y) {
+        var soma = x + 2;
+        if (soma > y) {
+          return soma;
+        }
+        console.log(soma);
+        x = soma;
+      }
+    }
+    var resultado = pares(32, 321);
+
+  </script>
+</body>
+
+</html>

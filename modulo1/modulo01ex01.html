@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript - Rocketseat</title>
+</head>
+
+<body>
+    <div>
+        <h1>MÓDULO 01 - 1º EXERCÍCIO</h1>
+        <h2>Visualizar resultado no console</h2>
+    </div>
+
+    <script>
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        function exibeMensagem(endereco) {
+            return (
+                "O usuário mora em " +
+                endereco.cidade +
+                " / " +
+                endereco.uf +
+                ", no bairro " +
+                endereco.bairro +
+                ', na rua "' +
+                endereco.rua +
+                '" com nº ' +
+                endereco.numero +
+                "."
+            );
+        }
+        console.log(exibeMensagem(endereco));
+
+    </script>
+</body>
+
+</html>

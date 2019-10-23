@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Curso Javascript - Rocketseat</title>
+</head>
+
+<body>
+  <h1>MÓDULO 02 - 4º EXERCÍCIO</h1>
+
+  <input type="text" name="nome">
+  <button onClick="adicionar()">Adicionar</button>
+  <ul id="lista"></ul>
+
+  <script>
+
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+    var list = document.querySelector('#lista');
+    var inputElement = document.querySelector('input');
+
+    function createListElement(name) {
+      var listElement = document.createElement('li');
+      listElement.innerText = name;
+      list.appendChild(listElement);
+    }
+
+    nomes.forEach(function (name) {
+      createListElement(name);
+    })
+
+    function adicionar() {
+      var name = inputElement.value;
+      createListElement(name);
+      inputElement.value = '';
+    }
+
+  </script>
+</body>
+
+</html>
