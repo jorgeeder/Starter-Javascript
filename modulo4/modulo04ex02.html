@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript - Rocketseat</title>
+    </head>
+    <body>
+        <div>
+            <h1>Módulo 04 - 2º exercício</h1>
+            <h2>Visualizar resultado no console</h2>
+        </div>
+        <div id="app">
+            <input type="text" name="user">
+            <button onclick="listRepos()">Adicionar</button>
+
+            <ul></ul>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            var listElement = document.querySelector('ul');
+            var inputElement = document.querySelector('input');
+
+            function renderRepos(repos){
+                listElement.innerHTML = "";
+
+                for (repo of repos){
+                    var listItem = document.createElement('li');
+                    var repoName = document.createTextNode(repo.name);
+
+                    listItem.appendChild(repoName);
+                    listElement.appendChild(listItem);
+                }
+
+            }
+
+            function listRepos(){
+
+                if (!inputElement.value) return;
+
+                axios.get('https://api.github.com/users/' + inputElement.value + '/repos')
+                    .then(function(response){
+                        renderRepos(response.data);
+                    })
+                    .catch(function(reject){
+                        alert('Usuario nao existe');
+                    })
+            } 
+        </script>
+    </body>
+</html>
